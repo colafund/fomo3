@@ -21,7 +21,7 @@
 <body>
 
     <!-- start preloader -->
-    <div class="preloader" id="preloader"></div>
+    <div class="preloader" id="preloader" style="opacity: 0; display: none;"></div>
     <!-- end preloader -->
 
     <a href="#" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
@@ -32,8 +32,7 @@
             <div class="container">
                 <div class="row d-flex header-area">
                     <div class="logo-section flex-grow-1 d-flex align-items-center">
-                        <a class="site-logo site-title" href="index.html"><img src="images/logo.png"
-                                alt="site-logo"></a>
+                        <a class="site-logo site-title" href="index.html"><img src="images/logo.png" height="40" width="140"alt="site-logo"></a>
                     </div>
                     <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -43,43 +42,22 @@
                     <nav class="navbar navbar-expand-lg p-0">
                         <div class="navbar-collapse collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu ml-auto">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="menu_has_children"><a href="#0">Tournaments</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="tournaments.html">Tournaments</a></li>
-                                        <li><a href="tournaments-single.html">Tournaments Single</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu_has_children"><a href="#0" class="active">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                        <li><a href="profile.html">Profile</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="check-out.html">Check Out</a></li>
-                                        <li><a href="features.html">Features</a></li>
-                                        <li><a href="error.html">Error</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="tournaments.html">Play</a>
+                                <li><a href="#">NFT</a>
+                                <li><a href="#">Pool</a>
                         </div>
                     </nav>
                     <div class="right-area header-action d-flex align-items-center">
                         <div class="search-icon">
-                            <a href="#"><img src="images/search_btn.png" alt="icon"></a>
                         </div>
                         <div class="lang d-flex align-items-center">
                             <select>
                                 <option value="1">EN</option>
-                                <option value="2">BN</option>
-                                <option value="3">ES</option>
-                                <option value="4">NL</option>
+                                <option value="2">TW</option>
                             </select>
                         </div>
-                        <a href="login.html" class="login-btn">Login</a>
-                        <a href="registration.html" class="cmn-btn">Join Now!</a>
+                        <a href="#" class="cmn-btn">Connect</a>
                     </div>
                 </div>
             </div>
@@ -89,50 +67,15 @@
 
     <!-- banner-section start -->
     <section id="banner-section" class="inner-banner profile">
-        <div class="ani-img">
-            <img class="img-1" src="images/banner-circle-1.png" alt="icon">
-            <img class="img-2" src="images/banner-circle-2.png" alt="icon">
-            <img class="img-3" src="images/banner-circle-2.png" alt="icon">
-        </div>
         <div class="banner-content d-flex align-items-center">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="main-content">
-                            <h1>Profile Page</h1>
+                            <h1>PLAY GAMES</h1>
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb d-flex justify-content-center">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Profile Page</li>
-                                    </ol>
                                 </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="heading-area">
-                <div class="row justify-content-between">
-                    <div class="col-md-6">
-                        <div class="profile-area d-flex align-items-center">
-                            <div class="photo">
-                                <img src="images/profile-logo.png" alt="Image">
-                            </div>
-                            <div class="name-area">
-                                <h4>Carter Stanton</h4>
-                                <span>536K followers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
-                        <div class="right d-flex align-items-center">
-                            <a href="#" class="cmn-btn">Message</a>
-                            <div class="user-logo d-flex align-items-center justify-content-center">
-                                <img src="images/user-icon.png" alt="Image">
                             </div>
                         </div>
                     </div>
@@ -195,7 +138,7 @@
                     </div>
                     <div class="statistics-area">
                         <div class="row">
-                            <div class="col-lg-9">
+                            <div class="container">
                                 <div class="total-area">
                                     <div class="head-area d-flex justify-content-between">
                                         <div class="left">
@@ -208,243 +151,456 @@
                                     </div>
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="fortnite-tab" data-toggle="tab" href="#fortnite" role="tab" aria-controls="fortnite"
-                                                aria-selected="true">fortnite</a>
+                                            <a class="nav-link" id="fortnite-tab" data-toggle="tab" href="#fortnite" role="tab" aria-controls="fortnite" aria-selected="false">USDT</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="warzone-tab" data-toggle="tab" href="#warzone" role="tab" aria-controls="warzone"
-                                                aria-selected="false">warzone</a>
+                                            <a class="nav-link" id="warzone-tab" data-toggle="tab" href="#warzone" role="tab" aria-controls="warzone" aria-selected="false">BUSD</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="lofl-tab" data-toggle="tab" href="#lofl" role="tab" aria-controls="lofl"
-                                                aria-selected="false">lofl</a>
+                                            <a class="nav-link active" id="lofl-tab" data-toggle="tab" href="#lofl" role="tab" aria-controls="lofl" aria-selected="true">BNB</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="dota-tab" data-toggle="tab" href="#dota" role="tab" aria-controls="dota" aria-selected="false">dota</a>
+                                            <a class="nav-link" id="dota-tab" data-toggle="tab" href="#dota" role="tab" aria-controls="dota" aria-selected="false">ETH</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContents">
-                                        <div class="tab-pane fade show active" id="fortnite" role="tabpanel" aria-labelledby="fortnite-tab">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-1.png" alt="image">
-                                                        <p>Tournaments Entered</p>
-                                                        <h4>10</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-2.png" alt="image">
-                                                        <p>Kills Per Game (Average)</p>
-                                                        <h4>20</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-3.png" alt="image">
-                                                        <p>Games Played League of Legends</p>
-                                                        <h4>5</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-4.png" alt="image">
-                                                        <p>Earnings (Per tournament)</p>
-                                                        <h4>0</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="warzone" role="tabpanel" aria-labelledby="warzone-tab">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-1.png" alt="image">
-                                                        <p>Tournaments Entered</p>
-                                                        <h4>10</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-2.png" alt="image">
-                                                        <p>Kills Per Game (Average)</p>
-                                                        <h4>20</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-3.png" alt="image">
-                                                        <p>Games Played League of Legends</p>
-                                                        <h4>5</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-4.png" alt="image">
-                                                        <p>Earnings (Per tournament)</p>
-                                                        <h4>0</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="lofl" role="tabpanel" aria-labelledby="lofl-tab">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-1.png" alt="image">
-                                                        <p>Tournaments Entered</p>
-                                                        <h4>10</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-2.png" alt="image">
-                                                        <p>Kills Per Game (Average)</p>
-                                                        <h4>20</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-3.png" alt="image">
-                                                        <p>Games Played League of Legends</p>
-                                                        <h4>5</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-4.png" alt="image">
-                                                        <p>Earnings (Per tournament)</p>
-                                                        <h4>0</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="dota" role="tabpanel" aria-labelledby="dota-tab">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-1.png" alt="image">
-                                                        <p>Tournaments Entered</p>
-                                                        <h4>10</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-2.png" alt="image">
-                                                        <p>Kills Per Game (Average)</p>
-                                                        <h4>20</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-3.png" alt="image">
-                                                        <p>Games Played League of Legends</p>
-                                                        <h4>5</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6">
-                                                    <div class="single-item text-center">
-                                                        <img src="images/statistics-icon-4.png" alt="image">
-                                                        <p>Earnings (Per tournament)</p>
-                                                        <h4>0</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="tab-pane fade" id="fortnite" role="tabpanel" aria-labelledby="fortnite-tab">
+                                            <div class="container">
+                                                <div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
                                     </div>
                                 </div>
-                                <div class="tournaments-slider">
-                                    <div class="top-area">
-                                        <h5>Active Tournaments</h5>
-                                        <p class="text-sm">Tournaments I'm playing now</p>
-                                    </div>
-                                    <div class="tournaments-slide">
-                                        <div class="single-slide">
-                                            <a href="tournaments-single.html"><img src="images/tournaments-slide-1.png" alt="Image"></a>
-                                        </div>
-                                        <div class="single-slide">
-                                            <a href="tournaments-single.html"><img src="images/tournaments-slide-2.png" alt="Image"></a>
-                                        </div>
-                                        <div class="single-slide">
-                                            <a href="tournaments-single.html"><img src="images/tournaments-slide-3.png" alt="Image"></a>
-                                        </div>
-                                        <div class="single-slide">
-                                            <a href="tournaments-single.html"><img src="images/tournaments-slide-2.png" alt="Image"></a>
-                                        </div>
-                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="sidebar-area">
-                                    <div class="title-area">
-                                        <h5>My Statistics</h5>
-                                        <p class="text-sm">My Current progress</p>
+                        </div>
+                    </div>
+                </div><div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $500 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <span><img src="images/my-statistics-icon-1.png" alt="image">Avg. Finish Rank</span>
-                                            <span>313</span>
-                                        </li>
-                                        <li>
-                                            <span><img src="images/my-statistics-icon-2.png" alt="image">Total Games Played</span>
-                                            <span>1193</span>
-                                        </li>
-                                        <li>
-                                            <span><img src="images/my-statistics-icon-3.png" alt="image">Tournaments Played</span>
-                                            <span>24</span>
-                                        </li>
-                                        <li>
-                                            <span><img src="images/my-statistics-icon-4.png" alt="image">Times Paid</span>
-                                            <span>10</span>
-                                        </li>
-                                        <li>
-                                            <span><img src="images/my-statistics-icon-5.png" alt="image">Tournaments Won</span>
-                                            <span>02</span>
-                                        </li>
-                                    </ul>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
                                 </div>
-                                <div class="sidebar-area">
-                                    <div class="title-area">
-                                        <h5>Earnings</h5>
-                                        <p class="text-sm">My current earnings</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$5000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $1000 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
                                     </div>
-                                    <div class="parents-area">
-                                        <div class="single-area d-flex align-items-center">
-                                            <div class="img-area d-flex align-items-center justify-content-center">
-                                                <img src="images/earnings-icon-1.png" alt="image">
-                                            </div>
-                                            <div class="right-area">
-                                                <span><img src="images/coin-icon.png" alt="image">300</span>
-                                                <p class="text-sm">Total Coins Earned</p>
-                                            </div>
-                                        </div>
-                                        <div class="single-area d-flex align-items-center">
-                                            <div class="img-area mid d-flex align-items-center justify-content-center">
-                                                <img src="images/earnings-icon-2.png" alt="image">
-                                            </div>
-                                            <div class="right-area">
-                                                <span><img src="images/coin-icon.png" alt="image">10</span>
-                                                <p class="text-sm">Average Entry Fee</p>
-                                            </div>
-                                        </div>
-                                        <div class="single-area d-flex align-items-center">
-                                            <div class="img-area last d-flex align-items-center justify-content-center">
-                                                <img src="images/earnings-icon-3.png" alt="image">
-                                            </div>
-                                            <div class="right-area">
-                                                <span><img src="images/coin-icon.png" alt="image">$473.00</span>
-                                                <p class="text-sm">Total Coins Earned</p>
-                                            </div>
-                                        </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
                                     </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$10,000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                                        </div>
+                                        <div class="tab-pane fade" id="warzone" role="tabpanel" aria-labelledby="warzone-tab">
+                                            <div class="container">
+                                                
+                                                
+                                                
+                                                <div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                                            <div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                                        </div>
+                                        <div class="tab-pane fade active show" id="lofl" role="tabpanel" aria-labelledby="lofl-tab">
+                                            <div class="container">
+                                                
+                                                
+                                                
+                                                <div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="single-item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                                        </div>
+                                        <div class="tab-pane fade" id="dota" role="tabpanel" aria-labelledby="dota-tab">
+                                            <div class="container">
+                                                
+                                                
+                                                
+                                                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                                            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <img class="top-img" src="images/game-img-1.png" alt="image">
+                        </div>
+                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
+                            <div class="mid-area">
+                                <h4>USDT $100 POOL</h4>
+                                <div class="title-bottom d-flex">
+                                    <div class="time-area bg">
+                                        <img src="images/waitng-icon.png" alt="image">
+                                        <span>Starts in</span>
+                                        <span class="time">10d 2H 18M</span>
+                                    </div>
+                                    <div class="date-area bg">
+                                        <span class="date">Apr 21, 5:00 AM EDT</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <div class="prize-area text-center">
+                                <div class="contain-area">
+                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
+                                    <h4 class="dollar">$1000</h4>
+                                    <a href="tournaments-single.html" class="cmn-btn">GO</a>
+                                    <p>Handling Fee 3%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                                        </div>
+                                    </div>
+                                        <div class="tab-pane fade show active" id="fortnite" role="tabpanel" aria-labelledby="fortnite-tab">
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="warzone" role="tabpanel" aria-labelledby="warzone-tab">
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="lofl" role="tabpanel" aria-labelledby="lofl-tab">
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="dota" role="tabpanel" aria-labelledby="dota-tab">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        
     </section>
     <!-- Trophies Content End -->
 
@@ -458,13 +614,9 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 col-md-8">
                                     <div class="top-area text-center">
-                                        <h3>Subscribe to Our Newsletter</h3>
+                                        <h3>Subscribe To Our Channel</h3>
                                         <p>Receive news, stay updated and special offers</p>
-                                    </div>
-                                    <form action="#">
-                                        <div class="subscribe d-flex">
-                                            <input type="email" placeholder="Your Email Address">
-                                            <button class="cmn-btn">Subscribe</button>
+                                            <a href="#" class="cmn-btn">Join US</a>
                                         </div>
                                     </form>
                                 </div>
@@ -482,17 +634,17 @@
                             <a class="site-logo site-title" href="index.html"><img src="images/logo.png" alt="site-logo"></a>
                         </div>
                         <ul class="menu-side d-flex align-items-center">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="https://bscscan.com" class="active">BNBCHAIN</a></li>
+                            <li><a href="https://dexscreener.com/watchlist">Chart</a></li>
+                            <li><a href="https://pancakeswap.finance">SWAP</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
                         <div class="right-area">
                             <ul class="d-flex">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -505,8 +657,8 @@
                     <div class="row d-flex align-items-center justify-content-center">
                         <div class="col-lg-12 col-md-6">
                             <div class="left-area text-center">
-                                <p>Copyright © 2021. All Rights Reserved By
-                                    <a href="#">BEGAM</a>
+                                <p>C© 2022-2023
+                                    <a href="https://fomo3.io">FOMO3</a>
                                 </p>
                             </div>
                         </div>
@@ -528,6 +680,8 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 
