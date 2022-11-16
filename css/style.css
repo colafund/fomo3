@@ -1404,7 +1404,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* footer section */
 #footer-section{
-    background-image: url(../images/footer-bg.png);
+    background-image: url(../images/#);
     background-repeat: no-repeat;
     margin-top: 60px;
 }
