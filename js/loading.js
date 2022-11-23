@@ -56,7 +56,7 @@
 			    });
 			    loadingPosition = 'absolute';
 		    }else{
-		    	loadingPosition = 'absolute';
+		    	loadingPosition = 'fixed';
 		    }
 
 		    defaultProp._showOriginLoading = function(){
