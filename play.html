@@ -694,6 +694,8 @@ $('#staticBackdrop').modal('hide');
         var amount = $('#investAmount').val();
         await mint(adr,amount);
         $('#staticBackdrop1').modal('hide');
+        await makeData();
+
     }
 </script>
 
