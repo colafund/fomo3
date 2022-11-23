@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>1U Games - Web3 Online Games</title>
-
+    <link type="text/css" rel="stylesheet" href="test/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="skin/jedate.css">
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -15,6 +16,28 @@
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <style>
+        		@media (min-width: 750px){
+                    .navbar-collapse .navbar-nav .ph1{
+				display: none;
+			}
+  
+		}
+		@media (max-width: 750px){
+			.pc1{
+				display: none;
+			}
+            .USDTT{
+          font-size: 12px;
+          text-transform: lowercase !important;
+        }
+		}
+        .row1 {
+            margin-bottom: 30px;
+        }
+      
+    </style>
 </head>
 
 <body>
@@ -41,20 +64,29 @@
                     <nav class="navbar navbar-expand-lg p-0">
                         <div class="navbar-collapse collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu ml-auto">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li><a href="play.html">Play</a>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="play.html" class="active">Play</a>
+                                <li><a class="ph1" type="button" data-toggle="modal" data-target="#staticBackdrop">create</a>
                         </div>
                     </nav>
                     <div class="right-area header-action d-flex align-items-center">
-                        <div class="search-icon">
+                        <!-- <div class="search-icon">
                         </div>
                         <div class="lang d-flex align-items-center">
                             <select>
                                 <option value="1">EN</option>
                                 <option value="2">TW</option>
                             </select>
-                        </div>
-                        <a href="#" class="cmn-btn">Connect</a>
+                        </div> -->
+                        <!-- <div style="
+                        background: none;
+                   border: none;" type="button" class="btn btn-primary"> -->
+                            <a href="#" class="cmn-btn" id="select-address1"  onclick="initWallet('select-address1',true)">Connect Wallet</a>
+                        <!-- </div> -->
+                        
+                        <!-- onclick="initWallet('select-address1',true)" -->
+                            <a type="button" class="cmn-btn pc1" data-toggle="modal" data-target="#staticBackdrop">create</a>
+                       
                     </div>
                 </div>
             </div>
@@ -68,55 +100,96 @@
 
     <!-- Browse Tournaments start -->
     <section id="tournaments-section" class="pt-120 tournaments">
+
+       <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:black;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="    background: url(./images/A1-1.png);
+            height: 150px;
+            background-position: center center;
+            background-repeat: no-repeat;">
+
+            </div>
+            <div>
+                <div style="display: flex;
+                    border-bottom: 3px solid red;"><p style="    color: black;
+                    width: 30%;
+                    text-align: center;
+                    line-height: 47px;">Pirze Pool Size:</p><input id="createAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
+            </div>
+            <div class="jewarp">
+            <div class="content">
+ 
+
+                <div style="display: flex;
+                border-bottom: 3px solid red;"><p style="    color: black;
+                width: 30%;
+                text-align: center;
+                line-height: 47px;">Pool End Time:</p><div class="jeinpbox"><input type="text" class="jeinput" id="enYMDhms" placeholder="Please select a date"></div></div>
+                
+      
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer" style="
+        justify-content: center;">
+            <div >
+                <a class="cmn-btn" style="cursor: pointer;" onclick="createHandle()">create</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
         <div class="overlay pt-120 pb-120">
             <div class="container wow fadeInUp">
                 <div class="row d-flex justify-content-center">
                 </div>
-                <div class="single-item">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
-                            <img class="top-img" src="images/usdt.jpg" alt="image">
+                <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color:black;">&times;</span>
+                          </button>
                         </div>
-                        <div class="col-lg-6 col-md-9 d-flex align-items-center">
-                            <div class="mid-area">
-                                <h4>USDT Pool</h4>
-                                <div class="title-bottom d-flex">
-                                    <div class="time-area bg">
-                                        <img src="images/waitng-icon.png" alt="image">
-                                        <span>End Time：</span>
-                                        <span class="time">UTC 5:00 AM EDT</span>
-                                    </div>
-                                    <div class="date-area bg">
-                                        <span class="time">Prize number</span>
-                                    </div>
-                                </div>
-                                <div class="single-box d-flex">
-                                    <div class="box-item">
-                                        <a href="play.html" class="cmn-btn">invest</a>
-                                    </div>
-                                    <div class="box-item">
-                                        <a href="play.html" class="cmn-btn">redemption</a>
-                                    </div>
-                                    <div class="box-item">
-                                        <a href="play.html" class="cmn-btn">claims</a>
-                                    </div>
-                                </div>
+                        <div class="modal-body">
+                            <div style="    background: url(./images/A1-1.png);
+                            height: 150px;
+                            background-position: center center;
+                            background-repeat: no-repeat;">
+                
+                            </div>
+                            <div>
+                                <div style="display: flex;
+                                    border-bottom: 3px solid red;"><p style="    color: black;
+                                    width: 30%;
+                                    text-align: center;
+                                    line-height: 47px;">Bet Amount:</p><input id="investAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
                             </div>
                         </div>
-                        <div class="col-lg-3 d-flex align-items-center">
-                            <div class="prize-area text-center">
-                                <div class="contain-area">
-                                    <span class="prize"><img src="images/price-coin.png" alt="image">Size</span>
-                                    <h4 class="dollar">$100</h4>
-                                    <hr>
-                                    <span class="prize"><img src="images/price-coin.png" alt="image">Bonus</span>
-                                    <h4 class="dollar">$？</h4>
-
-                                </div>
+                        <div class="modal-footer" style="
+                        justify-content: center;">
+                           <div >
+                            <a class="cmn-btn" style="cursor: pointer;" id="approve">approve</a>
+                        </div>
+                            <div >
+                                <a class="cmn-btn" style="cursor: pointer;" id="invest">invest</a>
                             </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  <div id="taba2">
+                    
+                  </div>
+              
     </section>
     <!-- Browse Tournaments end -->
 
@@ -212,7 +285,431 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/main.js"></script>
+    <script  src="js/jedate.js"></script>
+    <script src="js/my.js"></script>
 
 </body>
+
+<script>
+
+        window.onload = async function (){
+            await makeData();
+    }
+
+  var enLang = {                            
+        name  : "en",
+        month : ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+        weeks : [ "SUN","MON","TUR","WED","THU","FRI","SAT" ],
+        times : ["Hour","Minute","Second"],
+        timetxt: ["Time","Start Time","End Time"],
+        backtxt:"Back",
+        clear : "Clear",
+        today : "Now",
+        yes   : "Confirm",
+        close : "Close"
+    }
+
+ var je =  jeDate("#enYMDhms",{
+        language:enLang,
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+
+    async function createHandle(){
+    //     var amount = $('#createAmount').val();
+    // console.log(je)
+    //     var vb = je.selectDate[0];
+    //     var vb1 = je.selectTime[0];
+    //     console.log(vb)
+    //     var time = new Date(vb.YYYY,vb.MM-1,vb.DD,vb1.hh,vb1.mm,vb1.ss);
+    //     var time1 = new Date();
+    //     if(time.getTime()>time1.getTime()){
+    //         var tie = Math.trunc(time.getTime()/1000);
+    //     }else{
+    //         Dreamer.error("Set time error",2000);
+    //         return;
+    //     }
+    //     console.log(tie);
+    //    await create(tie,amount);
+    //    const myModal = document.getElementById('staticBackdrop')
+    //    console.log($('#staticBackdrop'))
+ //identifier为模态框的id
+$('#staticBackdrop').modal('hide');
+
+
+       await makeData();
+    }
+
+  async  function makeData() {
+        var currentProvider = new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/145acbee350d44709d5e64f496e0e954');
+   // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+   //https://bsc-dataseed1.binance.org
+    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+    var abi =[
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "lib",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_usdt",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_randomAdr",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "USDT",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_endTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_totalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "createMetaCoin",
+      "outputs": [
+        {
+          "internalType": "contract IToken",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "createRadio",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "devFomoRadio",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPoolInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "adr",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "winningNumber",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endTime",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isCLosed",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "isCLaimed",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct Factory.poolInfo[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adr",
+          "type": "address"
+        }
+      ],
+      "name": "getUserCreateAdr",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isOpen",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "libraryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ownerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "randomAdr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_libraryAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setLibraryAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_open",
+          "type": "bool"
+        }
+      ],
+      "name": "setOpen",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_random",
+          "type": "address"
+        }
+      ],
+      "name": "setRandomAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_usdt",
+          "type": "address"
+        }
+      ],
+      "name": "setUSDTAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userCreates",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+  let contract = new ethers.Contract("0x7e0f855A59F5B64Dd06a69522F070C2046A4Cb6E", abi, web3Provider);
+  var list = await contract.getPoolInfo();
+  
+  $("#taba2").empty();
+		for(var i =0;i<list.length;i++){
+			console.log(list[i])
+            var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
+            var endTime = list[i][3].toNumber();
+           var time1 =  new Date(parseInt(endTime) * 1000);
+			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><span class="time">Prize number</span></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">？</h4></div></div></div></div></div>'); 
+		}
+    }
+    let formatDateTime = function (date) {  
+   var y = date.getFullYear();  
+   var m = date.getMonth() + 1;  
+   m = m < 10 ? ('0' + m) : m;  
+   var d = date.getDate();  
+   d = d < 10 ? ('0' + d) : d;  
+   var h = date.getHours();  
+   h=h < 10 ? ('0' + h) : h;  
+   var minute = date.getMinutes();  
+   minute = minute < 10 ? ('0' + minute) : minute;  
+   var second=date.getSeconds();  
+   second=second < 10 ? ('0' + second) : second;  
+   return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;  
+};
+    
+    function setAddress(adr) {
+   
+        console.log($('#approve'))
+  
+        if(!$('#approve').attr("accessKey")){
+            $('#approve').click(()=>{
+           
+           this.approve(adr);
+     
+       });
+        }
+        $('#approve').attr("accessKey",adr);
+       if(!$('#invest').attr("accessKey")){
+        $('#invest').click(
+            ()=>{
+           
+           this.mintHandel(adr);
+     
+       }
+        );
+       }
+       $('#invest').attr("accessKey",adr);
+    }
+
+    async function mintHandel(adr){
+        var amount = $('#investAmount').val();
+        await mint(adr,amount);
+        $('#staticBackdrop1').modal('hide');
+    }
+</script>
 
 </html>

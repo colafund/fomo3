@@ -1123,7 +1123,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 35px 0 0;
 }
 #tournaments-section .single-item .single-box .box-item{
-    border: 1px solid #281D61;
+    /* border: 1px solid #281D61; */
     margin-right: 19px;
     text-align: center;
     padding-bottom: 15px;
@@ -1150,7 +1150,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 14px;
     line-height: 21px;
     color: #75D115;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     display: block;
     margin-bottom: 6px;
 }
