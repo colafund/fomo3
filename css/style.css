@@ -1158,7 +1158,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-right: 5px;
 }
 #tournaments-section .single-item .contain-area{
-    margin: 60px auto;
+    margin: 30px auto;
 }
 #tournaments-section .single-item .prize-area .cmn-btn{
     font-style: normal;
@@ -4243,7 +4243,7 @@ body::-webkit-scrollbar-thumb:hover {
         text-align: center;
     }
     #tournaments-section .single-item .contain-area {
-        margin: 30px auto;
+        margin: 15px auto;
     }
     #tournaments-content .magnific-area a {
         width: 60px;
