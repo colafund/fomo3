@@ -295,23 +295,23 @@
     });
 
     async function createHandle(){
-    //     var amount = $('#createAmount').val();
-    // console.log(je)
-    //     var vb = je.selectDate[0];
-    //     var vb1 = je.selectTime[0];
-    //     console.log(vb)
-    //     var time = new Date(vb.YYYY,vb.MM-1,vb.DD,vb1.hh,vb1.mm,vb1.ss);
-    //     var time1 = new Date();
-    //     if(time.getTime()>time1.getTime()){
-    //         var tie = Math.trunc(time.getTime()/1000);
-    //     }else{
-    //         Dreamer.error("Set time error",2000);
-    //         return;
-    //     }
-    //     console.log(tie);
-    //    await create(tie,amount);
-    //    const myModal = document.getElementById('staticBackdrop')
-    //    console.log($('#staticBackdrop'))
+        var amount = $('#createAmount').val();
+    console.log(je)
+        var vb = je.selectDate[0];
+        var vb1 = je.selectTime[0];
+        console.log(vb)
+        var time = new Date(vb.YYYY,vb.MM-1,vb.DD,vb1.hh,vb1.mm,vb1.ss);
+        var time1 = new Date();
+        if(time.getTime()>time1.getTime()){
+            var tie = Math.trunc(time.getTime()/1000);
+        }else{
+            Dreamer.error("Set time error",2000);
+            return;
+        }
+        console.log(tie);
+       await create(tie,amount);
+       const myModal = document.getElementById('staticBackdrop')
+       console.log($('#staticBackdrop'))
  //identifier为模态框的id
 $('#staticBackdrop').modal('hide');
 

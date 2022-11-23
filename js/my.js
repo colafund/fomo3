@@ -1036,7 +1036,8 @@ async function mint(adr,amount){
     }
     let contract = new ethers.Contract(adr, mintAbi, walletWithProvider);
     try {
-            var idoBnb1 = await contract.issueHandle(amount);   
+            var idoBnb1 = await contract.issueHandle(amount);  
+            await idoBnb1.wait(); 
     } catch (error) {
         console.log(error);
         loadingStop();
