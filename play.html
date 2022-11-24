@@ -37,6 +37,13 @@
             margin-bottom: 30px;
         }
       
+        #tooltip {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
     </style>
 </head>
 
@@ -86,7 +93,7 @@
                         
                         <!-- onclick="initWallet('select-address1',true)" -->
                             <a type="button" class="cmn-btn pc1" data-toggle="modal" data-target="#staticBackdrop">create</a>
-                       
+                          
                     </div>
                 </div>
             </div>
@@ -95,8 +102,7 @@
     <!-- header-section end -->
 
     <!-- banner-section start -->
-
-    <!-- banner-section end -->
+      <!-- banner-section end -->
 
     <!-- Browse Tournaments start -->
     <section id="tournaments-section" class="pt-120 tournaments">
@@ -256,7 +262,9 @@
     <!-- footer-section end -->
 
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="js/bootstrap.min.js"></script>
+  
     <script src="js/slick.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/fontawesome.js"></script>
@@ -267,13 +275,31 @@
     <script src="js/main.js"></script>
     <script  src="js/jedate.js"></script>
     <script src="js/my.js"></script>
-
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 </body>
 
 <script>
+//  const button = document.querySelector('#button');
+//   const tooltip = document.querySelector('#tooltip');
 
+//   // Pass the button, the tooltip, and some options, and Popper will do the
+//   // magic positioning for you:
+//   const popperInstance = Popper.createPopper(button, tooltip);
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+$(function () {
+  $('.example-popover').popover({
+    container: 'body'
+  })
+})
         window.onload = async function (){
             await makeData();
+           var unm1= sessionStorage.getItem("bools");
+           if(unm1 == 1){
+            await initWallet('select-address1',true);
+           }
+            
     }
 
   var enLang = {                            
@@ -649,7 +675,7 @@ $('#staticBackdrop').modal('hide');
             var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
             var endTime = list[i][3].toNumber();
            var time1 =  new Date(parseInt(endTime) * 1000);
-			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><span class="time">My Numbers</span></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="titleA" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
 		}
     }
     let formatDateTime = function (date) {  
@@ -667,9 +693,12 @@ $('#staticBackdrop').modal('hide');
    return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;  
 };
     
-    function setAddress(adr) {
-   
-        console.log(adr)
+  async  function setAddress(adr) {
+        if (!walletWithProvider) {
+         loadingStop();
+         Dreamer.error("No wallet connected",2000);
+         return;
+     }
   
         $('#approve').unbind("click");
             $('#approve').click(()=>{
@@ -686,6 +715,555 @@ $('#staticBackdrop').modal('hide');
      
        }
         );
+        var abi=[
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "value",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Approval",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "nominee",
+                    "type": "address"
+                }
+            ],
+            "name": "NewOwnerNominated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnershipTransferred",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "from",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "to",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "value",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Transfer",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "acceptOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                }
+            ],
+            "name": "allowance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "approve",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "balanceOf",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "blackList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "burn",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "list",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "copyMapData",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "decimals",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "subtractedValue",
+                    "type": "uint256"
+                }
+            ],
+            "name": "decreaseAllowance",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "addedValue",
+                    "type": "uint256"
+                }
+            ],
+            "name": "increaseAllowance",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "managerList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "maxTotalSupply",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "mint",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "nominateNewOwner",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "nominatedOwner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "declaration",
+                    "type": "string"
+                }
+            ],
+            "name": "renounceOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "adr",
+                    "type": "address"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "bools",
+                    "type": "bool"
+                }
+            ],
+            "name": "setBlackList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "adr",
+                    "type": "address"
+                }
+            ],
+            "name": "setManagerAdr",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "symbol",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "totalSupply",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transfer",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transferFrom",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "version",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ];
+        let contract = new ethers.Contract("0x04cE2b25FF596D693C375927fab9DfFbB75D3A18", abi, walletWithProvider);
+        var amount = await contract.allowance(privateAddress,adr);
+       var newAmount =  amount.div(ethers.utils.bigNumberify("1000000000000000000")).toNumber().toFixed(0);
+        if(newAmount>100000){
+            $("#approve").hide();
+        }else{
+            $("#approve").show();
+        }
     }
 
     async function mintHandel(adr){
@@ -693,6 +1271,432 @@ $('#staticBackdrop').modal('hide');
         await mint(adr,amount);
         $('#staticBackdrop1').modal('hide');
         await makeData();
+
+    }
+
+   async function setTitle(adr) {
+    $('[data-toggle="popover"]').popover('hide')
+        if (!walletWithProvider) {
+         loadingStop();
+         Dreamer.error("No wallet connected",2000);
+         return;
+     }
+    var abi =[
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "name": "USDT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimReward",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "createAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "createRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "devAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "devFomoRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "endTime",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "adr",
+              "type": "address"
+            }
+          ],
+          "name": "getUserNumbers",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "startNum",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endNum",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ONE.userNumbers[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "_usdtAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_randomAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_createAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_devAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_timeAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_totalAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_devFomoRadio",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_createRadio",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ONE.tokenInfo",
+              "name": "info",
+              "type": "tuple"
+            }
+          ],
+          "name": "initialize",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isCLaimReturn",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isCLaimed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isCLosed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isInit",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "issueHandle",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "randomAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "returnUsdt",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "sellAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "startTime",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "userAdrNumbers",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "startNum",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endNum",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "userIssueAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "winningNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+      let contract = new ethers.Contract(adr, abi, walletWithProvider);
+      list =  await contract.getUserNumbers(privateAddress);
+      var len = list.length; 
+      var text = "";
+      for(var i = 0;i<len;i++){
+        var num1 = list[i][0].toNumber();
+        var num2 = list[i][1].toNumber();
+       
+       
+        if(num2 - num1 == 1){
+            text += num1;
+        }else{
+            text +=num1+"-"+(num2-1); 
+        }
+        if(i!= len-1){
+            text+=";";
+        }
+      }
+      $('#titleA').attr('data-content',text);
+  
+  $('[data-toggle="popover"]').popover('show')
 
     }
 </script>

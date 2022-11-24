@@ -1103,7 +1103,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-bottom: 10px;
 }
 #tournaments-section .single-item h4{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 #tournaments-section .single-item .bg{
     background: #21156E;
@@ -1113,6 +1113,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #tournaments-section .single-item .bg .time{
     color: #00FADF;
+    background: #21156E;
+    border-radius: 5px;
 }
 #tournaments-section .single-item .title-bottom{
     border-bottom: 1px solid #32286D;

@@ -67,6 +67,7 @@ async function initWallet(str,bools) {
             inputPrivatekey[0].innerHTML = privateAddress.slice(0,3)+"..."+privateAddress.slice(-2);
          }
      }
+     sessionStorage.setItem("bools",1);
 }
 
 async function approve(adr){
@@ -630,6 +631,7 @@ async function approve(adr){
   
     loadingStop();
     Dreamer.success("approve success",2000);
+    $("#approve").hide();
 }
 
 async function mint(adr,amount){
@@ -2528,4 +2530,5 @@ const kernel = gpu.createKernel(function() {
     const c = kernel();
     console.log(c);
 }
+
 
