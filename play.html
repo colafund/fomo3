@@ -670,7 +670,7 @@ $('#staticBackdrop').modal('hide');
             var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
             var endTime = list[i][3].toNumber();
            var time1 =  new Date(parseInt(endTime) * 1000);
-			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="titleA" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
 		}
     }
     let formatDateTime = function (date) {  
@@ -1269,7 +1269,7 @@ $('#staticBackdrop').modal('hide');
 
     }
 
-   async function setTitle(adr) {
+   async function setTitle(adr,ids) {
     $('[data-toggle="popover"]').popover('hide')
         if (!walletWithProvider) {
          loadingStop();
@@ -1686,10 +1686,10 @@ $('#staticBackdrop').modal('hide');
             text +=num1+"-"+(num2-1); 
         }
         if(i!= len-1){
-            text+=";";
+            text+="\r\n";
         }
       }
-      $('#titleA').attr('data-content',text);
+      $('#'+ids).attr('data-content',text);
   
   $('[data-toggle="popover"]').popover('show')
 
