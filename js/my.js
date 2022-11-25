@@ -618,7 +618,7 @@ async function approve(adr){
         Dreamer.error("No wallet connected",2000);
         return;
     }
-    let contract = new ethers.Contract("0x04cE2b25FF596D693C375927fab9DfFbB75D3A18", approveabi, walletWithProvider);
+    let contract = new ethers.Contract("0xA8c2F91AFc25b5B4F7674d732c59554286bbC7E0", approveabi, walletWithProvider);
     try {
         var approve = await contract.approve(adr,"1000000000000000000000000000000000");
         await approve.wait(); 
@@ -2208,7 +2208,7 @@ async function create(time,amount){
          Dreamer.error("No wallet connected",2000);
          return;
      }
-     let contract = new ethers.Contract("0x464febF1d765D896C0cDb127b21940c31a05a273", exchangeAbi, walletWithProvider);
+     let contract = new ethers.Contract("0x428c7Ba7d4942Dd580bB4a235315f1dF11A22194", exchangeAbi, walletWithProvider);
      try {
              var claimToken = await contract.createMetaCoin(time,amount);
          

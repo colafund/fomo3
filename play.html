@@ -99,15 +99,8 @@
             </div>
         </div>
     </header>
-    <!-- header-section end -->
 
-    <!-- banner-section start -->
-      <!-- banner-section end -->
-
-    <!-- Browse Tournaments start -->
-    <section id="tournaments-section" class="pt-120 tournaments">
-
-       <!-- Modal -->
+           <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -153,50 +146,117 @@
       </div>
     </div>
   </div>
-        <div class="overlay pt-120 pb-120">
-            <div class="container wow fadeInUp">
-                <div class="row d-flex justify-content-center">
-                </div>
-                <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" style="color:black;">&times;</span>
-                          </button>
+  <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:black;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="    background: url(./images/A1-1.png);
+            height: 150px;
+            background-position: center center;
+            background-repeat: no-repeat;">
+
+            </div>
+            <div>
+                <div style="display: flex;
+                    border-bottom: 3px solid red;"><p style="    color: black;
+                    width: 30%;
+                    text-align: center;
+                    line-height: 47px;">Bet Amount:</p><input id="investAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
+            </div>
+        </div>
+        <div class="modal-footer" style="
+        justify-content: center;">
+           <div >
+            <a class="cmn-btn" style="cursor: pointer;" id="approve">approve</a>
+        </div>
+            <div >
+                <a class="cmn-btn" style="cursor: pointer;" id="invest">invest</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- header-section end -->
+
+    <ul class="nav nav-tabs container" id="myTab" role="tablist" style="margin-top: 120px;max-width: 1110px;">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#Inprogress" type="button" role="tab" aria-controls="home" aria-selected="true">Inprogress</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#Ended" type="button" role="tab" aria-controls="profile" aria-selected="false">Ended</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#Filled" type="button" role="tab" aria-controls="contact" aria-selected="false">Filled</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Canceled-tab" data-toggle="tab" data-target="#Canceled" type="button" role="tab" aria-controls="Canceled" aria-selected="false">Canceled</button>
+          </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Inprogress" role="tabpanel" aria-labelledby="home-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
                         </div>
-                        <div class="modal-body">
-                            <div style="    background: url(./images/A1-1.png);
-                            height: 150px;
-                            background-position: center center;
-                            background-repeat: no-repeat;">
+           
+                          <div id="taba1">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Ended" role="tabpanel" aria-labelledby="profile-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+            
+                          <div id="taba2">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Filled" role="tabpanel" aria-labelledby="contact-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
                 
-                            </div>
-                            <div>
-                                <div style="display: flex;
-                                    border-bottom: 3px solid red;"><p style="    color: black;
-                                    width: 30%;
-                                    text-align: center;
-                                    line-height: 47px;">Bet Amount:</p><input id="investAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
-                            </div>
+                          <div id="taba3">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Canceled" role="tabpanel" aria-labelledby="Canceled-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
                         </div>
-                        <div class="modal-footer" style="
-                        justify-content: center;">
-                           <div >
-                            <a class="cmn-btn" style="cursor: pointer;" id="approve">approve</a>
-                        </div>
-                            <div >
-                                <a class="cmn-btn" style="cursor: pointer;" id="invest">invest</a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="taba2">
                     
-                  </div>
-              
-    </section>
+                          <div id="taba4">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+      </div>
+
+    <!-- banner-section start -->
+      <!-- banner-section end -->
+
+    <!-- Browse Tournaments start -->
+
     <!-- Browse Tournaments end -->
 
     <!-- Players of the Week In start -->
@@ -289,7 +349,7 @@ $(function () {
   })
 })
         window.onload = async function (){
-            await makeData();
+            await makeData(1);
            var unm1= sessionStorage.getItem("bools");
            if(unm1 == 1){
             await initWallet('select-address1',true);
@@ -333,19 +393,34 @@ $(function () {
        await create(tie,amount);
        const myModal = document.getElementById('staticBackdrop')
        console.log($('#staticBackdrop'))
- //identifier为模态框的id
+
 $('#staticBackdrop').modal('hide');
 
 
-       await makeData();
+       await makeData(1);
     }
 
-  async  function makeData() {
+    $('button[data-toggle="tab"]').on('shown.bs.tab',async function (event) {
+    //   console.log("shown.bs.tab")
+
+    //   console.log(event.target.id)
+      if(event.target.id == "home-tab"){
+        await makeData(1);
+      }else if(event.target.id == "profile-tab"){
+        await makeData(2);
+      }else if(event.target.id == "contact-tab"){
+        await makeData(3);
+      }else if(event.target.id == "Canceled-tab"){
+        await makeData(4);
+      }
+})
+
+  async  function makeData(id) {
         var currentProvider = new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/145acbee350d44709d5e64f496e0e954');
    // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
    //https://bsc-dataseed1.binance.org
     let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-    var abi =[
+    var abi = [
     {
       "inputs": [
         {
@@ -489,6 +564,11 @@ $('#staticBackdrop').modal('hide');
               "internalType": "uint256",
               "name": "haveAmount",
               "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isCanceled",
+              "type": "bool"
             }
           ],
           "internalType": "struct Factory.poolInfo[]",
@@ -613,6 +693,24 @@ $('#staticBackdrop').modal('hide');
       "inputs": [
         {
           "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "bools",
+          "type": "bool"
+        }
+      ],
+      "name": "setPoolCancel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "_random",
           "type": "address"
         }
@@ -659,18 +757,40 @@ $('#staticBackdrop').modal('hide');
       "stateMutability": "view",
       "type": "function"
     }
-  ];
-   let contract = new ethers.Contract("0x464febF1d765D896C0cDb127b21940c31a05a273", abi, web3Provider);
+  ]
+      let contract = new ethers.Contract("0x428c7Ba7d4942Dd580bB4a235315f1dF11A22194", abi, web3Provider);
   var list = await contract.getPoolInfo();
   
-  $("#taba2").empty();
+  $("#taba"+id).empty();
 		for(var i =list.length-1;i>-1;i--){
 			console.log(list[i])
             console.log(list[i][2].toString());
             var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
             var endTime = list[i][3].toNumber();
            var time1 =  new Date(parseInt(endTime) * 1000);
-			$("#taba2").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           var isCLosed = list[i][4];
+           var isCanceled = list[i][7];
+           var time2 = new Date().getTime();
+           var time3 = parseInt(endTime) * 1000;
+           if(id == 1){
+            if(!isCLosed && time3 > time2){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 2){
+            if(isCLosed){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 3){
+            if(!isCLosed && time2 > time3){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 4){
+            if(isCanceled){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="images/usdt.jpg" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">USDT Pool:<br/>'+list[i][0]+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }
+          
+			
 		}
     }
     let formatDateTime = function (date) {  
@@ -1251,7 +1371,7 @@ $('#staticBackdrop').modal('hide');
             "type": "function"
         }
     ];
-        let contract = new ethers.Contract("0x04cE2b25FF596D693C375927fab9DfFbB75D3A18", abi, walletWithProvider);
+        let contract = new ethers.Contract("0xA8c2F91AFc25b5B4F7674d732c59554286bbC7E0", abi, walletWithProvider);
         var amount = await contract.allowance(privateAddress,adr);
        var newAmount =  amount.div(ethers.utils.bigNumberify("1000000000000000000")).toNumber().toFixed(0);
         if(newAmount>100000){
@@ -1265,7 +1385,7 @@ $('#staticBackdrop').modal('hide');
         var amount = $('#investAmount').val();
         await mint(adr,amount);
         $('#staticBackdrop1').modal('hide');
-        await makeData();
+        await makeData(1);
 
     }
 
