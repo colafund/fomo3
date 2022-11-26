@@ -13,7 +13,7 @@ var privateAddress;
 var inputPrivatekey;
 var currentAddress ;
 var invinteAdr = window.location.hash.slice(1);
-var factoryAbi = [
+var factoryAbi =[
   {
     "inputs": [
       {
@@ -309,6 +309,72 @@ var factoryAbi = [
         "internalType": "struct Factory.poolInfo[]",
         "name": "",
         "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "pool",
+        "type": "address"
+      }
+    ],
+    "name": "getSearchPoolInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "adr",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "winningNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isCLosed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isCLaimed",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "haveAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isCanceled",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "poolName",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Factory.poolInfo",
+        "name": "",
+        "type": "tuple"
       }
     ],
     "stateMutability": "view",
@@ -2492,7 +2558,7 @@ async function create(time,amount,name){
          Dreamer.error("No wallet connected",2000);
          return;
      }
-     let contract = new ethers.Contract("0x0E8196C782a04Cec74fdd72ed53d560Fa9DFdee4", factoryAbi, walletWithProvider);
+     let contract = new ethers.Contract("0x38e77157B32E1f19dF569d823B3D93280342Ac8d", factoryAbi, walletWithProvider);
      try {
              var claimToken = await contract.createMetaCoin(time,amount,name);
          
