@@ -2900,8 +2900,8 @@ var ips = "1.0.1.0-1.0.1.255,1.0.2.0-1.0.3.255,1.0.8.0-1.0.15.255,1.0.32.0-1.0.6
       var unitIp = ipAR[i];
       var arr1 = unitIp.split("-");
       var left = arr1[0].split(".");
-      var right = arr1[0].split(".");
-      if(ipe[0] == left[0]&&ipe[1]|0>=left[1]|0&&ipe[1]|0<=right[1]|0&&ipe[2]|0>=left[2]|0&&ipe[2]|0<=right[2]|0){
+      var right = arr1[1].split(".");
+      if(ipe[0] == left[0]&&(ipe[1]|0)>=(left[1]|0)&&(ipe[1]|0)<=(right[1]|0)&&(ipe[2]|0)>=(left[2]|0)&&(ipe[2]|0)<=(right[2]|0)){
             bools = true;
             return bools;
       }
@@ -2914,6 +2914,7 @@ async function isAllow(){
   let ip=await getIp()
   console.log(ip);
  var bools =  isChina(ip)
+ console.log(bools);
  return !bools;
 
 

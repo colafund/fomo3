@@ -108,11 +108,25 @@
             <img src="./images/icon.png" alt="not available" class="icon">
             <h3>Service not available in current country</h3>
             <p>
-                We have detected that your current IP is from a country/region that is not supported by the service, please pay attention,According to our<a
+                We have detected that your current IP :<p id="iip"></p> is from a country/region that is not supported by the service, please pay attention,According to our<a
                     target="_blank">Terms of use</a>，We have discontinued service to users from your current country.
             </p>
         </div>
     </div>
 </body>
+<script src="./js/my.js"></script>
+<script>
+       window.onload = async function (){
+        var ipq = await getIp();
+        var iip=document.getElementById("iip");
+            iip.innerHTML = ipq;
+         var bools =  await isAllow();
+         console.log(bools);
+         if(bools){
+          location.href = './index.html';
+         }    
+  }
+
+</script>
 
 </html>
