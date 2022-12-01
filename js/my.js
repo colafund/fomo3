@@ -1,9 +1,13 @@
+// const { axios } = require("./axios");
+
 var web3je = "./js/web3.min.js";
 document.write('<scr' + 'ipt type="text/javascript" src="'+web3je+'"></scr' + 'ipt>');
 var etherje = "./js/ether.js";
 document.write('<scr' + 'ipt type="text/javascript" src="'+etherje+'"></scr' + 'ipt>');
 // var jqueryje = "./js/jquery2.js";
 // document.write('<scr' + 'ipt type="text/javascript" src="'+jqueryje+'"></scr' + 'ipt>');
+var axiosje = "./js/axios.js";
+document.write('<scr' + 'ipt type="text/javascript" src="'+axiosje+'"></scr' + 'ipt>');
 var loadingje = "./js/loading.js";
 document.write('<scr' + 'ipt type="text/javascript" src="'+loadingje+'"></scr' + 'ipt>');
 var messageje = "./js/message.js";
@@ -2879,6 +2883,31 @@ const kernel = gpu.createKernel(function() {
 
     const c = kernel();
     console.log(c);
+}
+async function getIp() {
+  const res=await axios.get('https://api.ipify.org/')
+  return res.data
+}
+
+async function isChina(ip){
+    const res = await axios.get("http://txt.go.sohu.com/ip/soip");
+    // console.log(res.data);
+    var index=res.data.lastIndexOf('hu_IP_Loc_V="');
+    var   obj=res.data.substring(index+13,index+20);
+    var index1=obj.lastIndexOf('CN');
+    if(index1!=-1){
+      return false;
+    }
+    return true;
+}
+async function isAllow(){
+  let isAllow=false
+  let ip=await getIp()
+  console.log(ip);
+ var bools = await isChina(ip);
+console.log(bools)
+ return bools;
+
 }
 
 
