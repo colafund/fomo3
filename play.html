@@ -460,7 +460,10 @@ $(function () {
   })
 })
         window.onload = async function (){
-          isAllow();
+           var bools =  await isAllow();
+           if(!bools){
+            location.href = './prohibit.html';
+           }
             await makeData(1);
            var unm1= sessionStorage.getItem("bools");
            if(unm1 == 1){

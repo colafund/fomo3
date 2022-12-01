@@ -342,7 +342,19 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/my.js"></script>
 </body>
+
+<script>
+        window.onload = async function (){
+           var bools =  await isAllow();
+           console.log(bools);
+           if(!bools){
+            location.href = './prohibit.html';
+           }
+            
+            
+    }
+</script>
 
 </html>

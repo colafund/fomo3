@@ -2890,7 +2890,7 @@ async function getIp() {
 }
 
 async function isChina(ip){
-    const res = await axios.get("http://txt.go.sohu.com/ip/soip");
+    const res = await axios.get("http://txt.go.sohu.com/ip/soip?time="+new Date().getTime());
     // console.log(res.data);
     var index=res.data.lastIndexOf('hu_IP_Loc_V="');
     var   obj=res.data.substring(index+13,index+20);
