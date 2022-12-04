@@ -487,11 +487,11 @@ $(function () {
 
     //getSerachPool
    async function getSerachPool(adr){
-    var currentProvider = new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/145acbee350d44709d5e64f496e0e954');
+    var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
    // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
    //https://bsc-dataseed1.binance.org
     let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-         let contract = new ethers.Contract("0x38e77157B32E1f19dF569d823B3D93280342Ac8d", factoryAbi, web3Provider);
+         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, web3Provider);
   var list = await contract.getSearchPoolInfo(adr);
   var num = list[2].toString() != "0"?list[2].toString():"?";
             var endTime = list[3].toNumber();
@@ -582,11 +582,11 @@ $('#staticBackdrop').modal('hide');
 })
 
   async  function makeData(id) {
-        var currentProvider = new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/145acbee350d44709d5e64f496e0e954');
+        var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
    // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
    //https://bsc-dataseed1.binance.org
     let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-         let contract = new ethers.Contract("0x38e77157B32E1f19dF569d823B3D93280342Ac8d", factoryAbi, web3Provider);
+         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, web3Provider);
   var list = await contract.getPoolInfo();
   
   $("#taba"+id).empty();
@@ -636,7 +636,7 @@ $('#staticBackdrop').modal('hide');
          Dreamer.error("No wallet connected",2000);
          return;
      }
-         let contract = new ethers.Contract("0x38e77157B32E1f19dF569d823B3D93280342Ac8d", factoryAbi, walletWithProvider);
+         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, walletWithProvider);
         if(id == 2){
             var list = await contract.getMyPoolInfo(privateAddress);
             $("#taba6").empty();
@@ -1252,7 +1252,7 @@ $('#staticBackdrop').modal('hide');
             "type": "function"
         }
     ];
-        let contract = new ethers.Contract("0x24f8A701a962B53656E9BFC520536dB00d9E7a7E", abi, walletWithProvider);
+        let contract = new ethers.Contract("0x55d398326f99059fF775485246999027B3197955", abi, walletWithProvider);
         var amount = await contract.allowance(privateAddress,adr);
        var newAmount =  amount.div(ethers.utils.bigNumberify("1000000000000000000")).toNumber().toFixed(0);
         if(newAmount>100000){
