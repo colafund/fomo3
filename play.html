@@ -489,10 +489,10 @@ $(function () {
     //getSerachPool
    async function getSerachPool(adr){
     var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
-   // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+   // https://eth-goerli.public.blastapi.io
    //https://bsc-dataseed1.binance.org
     let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, web3Provider);
+         let contract = new ethers.Contract("0x39A40B8A8ef3C5B0e758959B0BA5feC9FBaBfd99", factoryAbi, web3Provider);
   var list = await contract.getSearchPoolInfo(adr);
   var num = list[2].toString() != "0"?list[2].toString():"?";
             var endTime = list[3].toNumber();
@@ -584,10 +584,10 @@ $('#staticBackdrop').modal('hide');
 
   async  function makeData(id) {
         var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
-   // https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+   // https://eth-goerli.public.blastapi.io
    //https://bsc-dataseed1.binance.org
     let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, web3Provider);
+         let contract = new ethers.Contract("0x39A40B8A8ef3C5B0e758959B0BA5feC9FBaBfd99", factoryAbi, web3Provider);
   var list = await contract.getPoolInfo();
   
   $("#taba"+id).empty();
@@ -637,7 +637,7 @@ $('#staticBackdrop').modal('hide');
          Dreamer.error("No wallet connected",2000);
          return;
      }
-         let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, walletWithProvider);
+         let contract = new ethers.Contract("0x39A40B8A8ef3C5B0e758959B0BA5feC9FBaBfd99", factoryAbi, walletWithProvider);
         if(id == 2){
             var list = await contract.getMyPoolInfo(privateAddress);
             $("#taba6").empty();

@@ -2556,13 +2556,13 @@ async function returnUsdt(adr){
 async function create(time,amount,name){
     loadingStart();
     
- 
+ console.log(time);
      if (!walletWithProvider) {
          loadingStop();
          Dreamer.error("No wallet connected",2000);
          return;
      }
-     let contract = new ethers.Contract("0xE5C93F7310B82ac7Cf2942c39D252DeD9092c2F1", factoryAbi, walletWithProvider);
+     let contract = new ethers.Contract("0x39A40B8A8ef3C5B0e758959B0BA5feC9FBaBfd99", factoryAbi, walletWithProvider);
      try {
              var claimToken = await contract.createMetaCoin(time,amount,name);
          
