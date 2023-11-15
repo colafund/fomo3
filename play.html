@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1U Games - Web3 Online Games</title>
+    <link type="text/css" rel="stylesheet" href="test/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="skin/jedate.css">
+    <link rel="shortcut icon" href="images/fav1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <style>
+        		@media (min-width: 750px){
+                    .navbar-collapse .navbar-nav .ph1{
+				display: none;
+			}
+  
+		}
+		@media (max-width: 750px){
+			.pc1{
+				display: none;
+			}
+            .USDTT{
+          font-size: 12px;
+          text-transform: lowercase !important;
+        }
+		}
+        .row1 {
+            margin-bottom: 30px;
+        }
+      
+        #tooltip {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  #search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+
+color : white;
+
+}
+
+#search::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+color : white;
+
+}
+
+#search::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+color : white;
+
+}
+
+#search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+color : white;
+
+}
+
+@media (max-width: 435px){
+    .search1{
+        margin-left: 10%;
+    width: 80%;
+}
+}
+@media (min-width: 435px){
+    .search1{
+    margin-left: 2%;
+          width: 43%;
+}
+}
+
+@media (min-width: 600px){
+    .search1{
+        margin-left: 20%;
+    width: 60%;
+}
+}
+@media (min-width: 1070px){
+    .search1{
+    margin-left: 10%;
+          width: 35%;
+}
+  
+		}
+
+  
+	
+  
+    </style>
+</head>
+
+<body>
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <a href="#" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+
+    <!-- header-section start -->
+    <header id="header-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <div class="logo-section flex-grow-1 d-flex align-items-center">
+                        <a class="site-logo site-title" href="."><img src="images/logo.png" height="40" width="140"alt="site-logo"></a>
+                    </div>
+                    <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ml-auto">
+                                <li><a href=".">Home</a></li>
+                                <li><a href="play.html" class="active">Play</a></li>
+				<li><a href="ido.html">IDO</a></li>
+                                <li><a href="https://jaymie-mourning.gitbook.io/1u.games/introduction/whats-1ugames" target="_blank">WhitePage</a></li>
+                                <li><a class="ph1" type="button" data-toggle="modal" data-target="#staticBackdrop">create</a></li>
+                        </div>
+                    </nav>
+                    <div class="right-area header-action d-flex align-items-center">
+                        <!-- <div class="search-icon">
+                        </div>
+                        <div class="lang d-flex align-items-center">
+                            <select>
+                                <option value="1">EN</option>
+                                <option value="2">TW</option>
+                            </select>
+                        </div> -->
+                        <!-- <div style="
+                        background: none;
+                   border: none;" type="button" class="btn btn-primary"> -->
+                            <a href="#" class="cmn-btn" id="select-address1"  onclick="initWallet('select-address1',true)">Connect Wallet</a>
+                        <!-- </div> -->
+                        
+                        <!-- onclick="initWallet('select-address1',true)" -->
+                            <a type="button" class="cmn-btn pc1" data-toggle="modal" data-target="#staticBackdrop">create</a>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+           <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:black;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="    background: url(./images/A1-1.png);
+            height: 150px;
+            background-position: center center;
+            background-repeat: no-repeat;">
+
+            </div>
+            <div>
+                <div style="display: flex;
+                    border-bottom: 3px solid red;"><p style="    color: black;
+                    width: 30%;
+                    text-align: center;
+                    line-height: 47px;">Pirze Pool Size:</p><input id="createAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
+            </div>
+            <div>
+                <div style="display: flex;
+                    border-bottom: 3px solid red;"><p style="    color: black;
+                    width: 30%;
+                    text-align: center;
+                    line-height: 47px;">Pool Name:</p><input id="createName" type="text" style="width: 70%;border: 0;" placeholder="Enter the name"></div>
+            </div>
+            <div class="jewarp">
+            <div class="content">
+ 
+
+                <div style="display: flex;
+                border-bottom: 3px solid red;"><p style="    color: black;
+                width: 30%;
+                text-align: center;
+                line-height: 47px;">Pool End Time:</p><div class="jeinpbox"><input type="text" class="jeinput" id="enYMDhms" placeholder="Please select a date"></div></div>
+                
+      
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer" style="
+        justify-content: center;">
+            <div >
+                <a class="cmn-btn" style="cursor: pointer;" onclick="createHandle()">create</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:black;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div style="    background: url(./images/A1-1.png);
+            height: 150px;
+            background-position: center center;
+            background-repeat: no-repeat;">
+
+            </div>
+            <div>
+                <div style="display: flex;
+                    border-bottom: 3px solid red;"><p style="    color: black;
+                    width: 30%;
+                    text-align: center;
+                    line-height: 47px;">Bet Amount:</p><input id="investAmount" type="number" style="width: 70%;border: 0;" placeholder="Enter the amount"></div>
+            </div>
+        </div>
+        <div class="modal-footer" style="
+        justify-content: center;">
+           <div >
+            <a class="cmn-btn" style="cursor: pointer;" id="approve">approve</a>
+        </div>
+            <div >
+                <a class="cmn-btn" style="cursor: pointer;" id="invest">invest</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- header-section end -->
+    <ul class="nav nav-tabs container" id="myTab" role="tablist" style="margin-top: 120px;max-width: 1110px;">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#Inprogress" type="button" role="tab" aria-controls="home" aria-selected="true">Inprogress</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#Ended" type="button" role="tab" aria-controls="profile" aria-selected="false">Ended</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#Filled" type="button" role="tab" aria-controls="contact" aria-selected="false">Filled</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Canceled-tab" data-toggle="tab" data-target="#Canceled" type="button" role="tab" aria-controls="Canceled" aria-selected="false">Canceled</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="MyBetting-tab" data-toggle="tab" data-target="#MyBetting" type="button" role="tab" aria-controls="MyBetting" aria-selected="false">MyBetting</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="MyPool-tab" data-toggle="tab" data-target="#MyPool" type="button" role="tab" aria-controls="MyPool" aria-selected="false">MyCreated</button>
+          </li>
+          <form action="" method="get" class="form-horizontal search1">
+            <div class="input-group search-input-group">
+            <input style="border-radius: 50px;background: bottom;height: 32px;color: white;" id="search" name="key" autocomplete="off" type="text" class="form-control" placeholder="Enter the contract" >
+         <div style=" 
+         position: absolute;
+    right: 1%;   
+         width: 32px;
+         height: 32px;
+         border-radius: 50px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-left: 20px;
+     ">
+           <svg t="1669434671624" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2490" width="20" height="20"><path d="M966.4 924.8l-230.4-227.2c60.8-67.2 96-156.8 96-256 0-217.6-176-390.4-390.4-390.4-217.6 0-390.4 176-390.4 390.4 0 217.6 176 390.4 390.4 390.4 99.2 0 188.8-35.2 256-96l230.4 227.2c9.6 9.6 28.8 9.6 38.4 0C979.2 950.4 979.2 934.4 966.4 924.8zM102.4 441.6c0-185.6 150.4-339.2 339.2-339.2s339.2 150.4 339.2 339.2c0 89.6-35.2 172.8-92.8 233.6-3.2 0-3.2 3.2-6.4 3.2-3.2 3.2-3.2 3.2-3.2 6.4-60.8 57.6-144 92.8-233.6 92.8C256 780.8 102.4 627.2 102.4 441.6z" p-id="2491" fill="#ffffff"></path></svg>
+        </div>
+        </div>
+            </form>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Inprogress" role="tabpanel" aria-labelledby="home-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+           
+                          <div id="taba1">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Ended" role="tabpanel" aria-labelledby="profile-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+            
+                          <div id="taba2">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Filled" role="tabpanel" aria-labelledby="contact-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+                
+                          <div id="taba3">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="Canceled" role="tabpanel" aria-labelledby="Canceled-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+                    
+                          <div id="taba4">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="MyBetting" role="tabpanel" aria-labelledby="MyBetting-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+                    
+                          <div id="taba5">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+        <div class="tab-pane fade" id="MyPool" role="tabpanel" aria-labelledby="MyPool-tab">
+            <section id="tournaments-section" class="tournaments" style="padding-top: 60px;">
+                <div class="overlay pb-120">
+                    <div class="container wow fadeInUp">
+                        <div class="row d-flex justify-content-center">
+                        </div>
+                    
+                          <div id="taba6">
+                            
+                          </div>
+                      
+            </section>
+        </div>
+      </div>
+
+    <!-- banner-section start -->
+      <!-- banner-section end -->
+
+    <!-- Browse Tournaments start -->
+
+    <!-- Browse Tournaments end -->
+
+    <!-- Players of the Week In start -->
+    <br>
+    <br>
+    <!-- Players of the Week In end -->
+
+    <!-- How Works start -->
+
+    <!-- How Works end -->
+
+    <!-- Call to Action In start -->
+
+    <!-- Call to Action In end -->
+
+    <!-- Call Action In start -->
+
+    <!-- Call Action In end -->
+
+    <!-- footer-section start -->
+    <footer id="footer-section">
+        <div class="footer-mid pt-120">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-lg-8 col-md-8 d-flex justify-content-md-between justify-content-center align-items-center cus-grid">
+                        <div class="logo-section">
+                            <a class="site-logo site-title" href="."><img src="images/logo.png" alt="site-logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                        <div class="right-area">
+                            <ul class="d-flex">
+                                <li><a href="https://t.me/get_1uGames_CN" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://twitter.com/1uGames" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="main-content">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="left-area text-center">
+                                <p>C© 2022-2023
+                                    <a href="https://1U.Games">1UGames</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-section end -->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/countdown.jquery.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script  src="js/jedate.js"></script>
+    <script src="js/my.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</body>
+
+<script>
+
+//  const button = document.querySelector('#button');
+//   const tooltip = document.querySelector('#tooltip');
+
+//   // Pass the button, the tooltip, and some options, and Popper will do the
+//   // magic positioning for you:
+//   const popperInstance = Popper.createPopper(button, tooltip);
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+$(function () {
+  $('.example-popover').popover({
+    container: 'body'
+  })
+})
+        window.onload = async function (){
+           var bools =  await isAllow();
+           if(!bools){
+            location.href = './prohibit.html';
+           }
+            await makeData(1);
+           var unm1= sessionStorage.getItem("bools");
+           if(unm1 == 1){
+            await initWallet('select-address1',true);
+           }
+            
+    }
+
+    //input
+    var currentTab = 1;
+    var currentSerachAdr = "";
+    var search=document.getElementById("search");
+    search.addEventListener("input",async function(e){
+               var adr = $('#search').val();
+               if(!adr){
+                return;
+               }
+           await getSerachPool(adr);
+           currentSerachAdr = adr;
+            });
+
+    //getSerachPool
+   async function getSerachPool(adr){
+    var currentProvider = new Web3.providers.HttpProvider('https://eth-goerli.public.blastapi.io');
+   // https://eth-goerli.public.blastapi.io
+   //https://bsc-dataseed1.binance.org
+   //0x39A40B8A8ef3C5B0e758959B0BA5feC9FBaB fd99
+    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+         let contract = new ethers.Contract("0xf2D42C8cF34225656d5C012aA4c07569820Be677", factoryAbi, web3Provider);
+  var list = await contract.getSearchPoolInfo(adr);
+  var num = list[2].toString() != "0"?list[2].toString():"?";
+            var endTime = list[3].toNumber();
+           var time1 =  new Date(parseInt(endTime) * 1000);
+           var isCLosed = list[4];
+           var isCanceled = list[7];
+           var src1 = "images/1USDT.png";
+           if(list[1].toNumber()>=1000){
+            var src1 = "images/2USDT.png";
+           }
+            if(list[1].toNumber()>=3000){
+            var src1 = "images/3USDT.png";
+           }
+           var svg1 = '<div style="display: initial;padding-left: 4px;" onclick="copyHandel(\''+list[0]+'\')"><svg t="1669445493786" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2392" width="13" height="13"><path d="M638.596211 191.936191q30.628116 0 54.62014 13.272183t41.347956 32.66999 26.544367 41.858425 9.188435 39.81655l0 576.829511q0 29.607178-11.740778 53.088734t-30.628116 39.81655-42.368893 25.52343-46.963111 9.188435l-503.322034 0q-19.397807 0-42.368893-11.230309t-42.879362-29.607178-33.180459-42.368893-13.272183-48.494516l0-568.662014q0-21.439681 10.209372-44.410768t26.544367-42.368893 37.774676-32.159521 44.921236-12.761715l515.57328 0zM578.360917 830.021934q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM578.360917 574.787637q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM759.0668 0q43.900299 0 80.654038 26.033898t63.808574 64.319043 42.368893 82.695912 15.314058 81.164506l0 542.117647q0 21.439681-12.761715 39.306082t-31.138584 30.628116-39.81655 20.418744-39.81655 7.657029l-4.083749 0 0-609.499501q-8.167498-70.444666-43.900299-108.219342t-94.947159-49.004985l-498.217348 0q1.020937-2.041874 1.020937-7.14656 0-20.418744 12.251246-41.858425t32.159521-38.795613 44.410768-28.586241 49.004985-11.230309l423.688933 0z" p-id="2393" fill="#e6e6e6"></path></svg></div>';
+         $("#taba"+currentTab).empty();
+         $("#taba"+currentTab).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[8]+':<br/>'+list[0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+1+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[0]+'\',\'title'+1+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[1].toNumber()-list[6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+   
+   }
+
+  var enLang = {                            
+        name  : "en",
+        month : ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+        weeks : [ "SUN","MON","TUR","WED","THU","FRI","SAT" ],
+        times : ["Hour","Minute","Second"],
+        timetxt: ["Time","Start Time","End Time"],
+        backtxt:"Back",
+        clear : "Clear",
+        today : "Now",
+        yes   : "Confirm",
+        close : "Close"
+    }
+
+ var je =  jeDate("#enYMDhms",{
+        language:enLang,
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+
+    async function createHandle(){
+        var amount = $('#createAmount').val();
+        var name1 = $('#createName').val();
+    console.log(je)
+        var vb = je.selectDate[0];
+        var vb1 = je.selectTime[0];
+        console.log(vb)
+        var time = new Date(vb.YYYY,vb.MM-1,vb.DD,vb1.hh,vb1.mm,vb1.ss);
+        var time1 = new Date();
+        if(time.getTime()>time1.getTime()){
+            var tie = Math.trunc(time.getTime()/1000);
+        }else{
+            Dreamer.error("Set time error",2000);
+            return;
+        }
+        console.log(tie);
+        console.log(name1)
+       await create(tie,amount,name1);
+       const myModal = document.getElementById('staticBackdrop')
+       console.log($('#staticBackdrop'))
+
+$('#staticBackdrop').modal('hide');
+
+
+       await makeData(1);
+    }
+
+    $('button[data-toggle="tab"]').on('shown.bs.tab',async function (event) {
+    //   console.log("shown.bs.tab")
+
+    //   console.log(event.target.id)
+      if(event.target.id == "home-tab"){
+        await makeData(1);
+        currentTab = 1;
+      }else if(event.target.id == "profile-tab"){
+        await makeData(2);
+        currentTab = 2;
+      }else if(event.target.id == "contact-tab"){
+        await makeData(3);
+        currentTab = 3;
+      }else if(event.target.id == "Canceled-tab"){
+        await makeData(4);
+        currentTab = 4;
+      }else if(event.target.id == "MyBetting-tab"){
+        await makeData1(1);
+        currentTab = 5;
+      }else if(event.target.id == "MyPool-tab"){
+        await makeData1(2);
+        currentTab = 6;
+      }
+})
+
+  async  function makeData(id) {
+        var currentProvider = new Web3.providers.HttpProvider('https://eth-goerli.public.blastapi.io');
+   // https://eth-goerli.public.blastapi.io
+   //https://bsc-dataseed1.binance.org
+    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+         let contract = new ethers.Contract("0xf2D42C8cF34225656d5C012aA4c07569820Be677", factoryAbi, web3Provider);
+  var list = await contract.getPoolInfo();
+  
+  $("#taba"+id).empty();
+		for(var i =list.length-1;i>-1;i--){
+			console.log(list[i])
+            console.log(list[i][2].toString());
+            var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
+            var endTime = list[i][3].toNumber();
+           var time1 =  new Date(parseInt(endTime) * 1000);
+           var isCLosed = list[i][4];
+           var isCanceled = list[i][7];
+           var time2 = new Date().getTime();
+           var time3 = parseInt(endTime) * 1000;
+           var src1 = "images/1USDT.png";
+           if(list[i][1].toNumber()>=1000){
+            var src1 = "images/2USDT.png";
+           }
+            if(list[i][1].toNumber()>=3000){
+            var src1 = "images/3USDT.png";
+           }
+           var svg1 = '<div style="display: initial;padding-left: 4px;" onclick="copyHandel(\''+list[i][0]+'\')"><svg t="1669445493786" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2392" width="13" height="13"><path d="M638.596211 191.936191q30.628116 0 54.62014 13.272183t41.347956 32.66999 26.544367 41.858425 9.188435 39.81655l0 576.829511q0 29.607178-11.740778 53.088734t-30.628116 39.81655-42.368893 25.52343-46.963111 9.188435l-503.322034 0q-19.397807 0-42.368893-11.230309t-42.879362-29.607178-33.180459-42.368893-13.272183-48.494516l0-568.662014q0-21.439681 10.209372-44.410768t26.544367-42.368893 37.774676-32.159521 44.921236-12.761715l515.57328 0zM578.360917 830.021934q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM578.360917 574.787637q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM759.0668 0q43.900299 0 80.654038 26.033898t63.808574 64.319043 42.368893 82.695912 15.314058 81.164506l0 542.117647q0 21.439681-12.761715 39.306082t-31.138584 30.628116-39.81655 20.418744-39.81655 7.657029l-4.083749 0 0-609.499501q-8.167498-70.444666-43.900299-108.219342t-94.947159-49.004985l-498.217348 0q1.020937-2.041874 1.020937-7.14656 0-20.418744 12.251246-41.858425t32.159521-38.795613 44.410768-28.586241 49.004985-11.230309l423.688933 0z" p-id="2393" fill="#e6e6e6"></path></svg></div>';
+           if(id == 1){
+            if(!isCLosed && time3 > time2 && !isCanceled){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 2){
+            if(isCLosed){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 3){
+            if(!isCLosed && time2 > time3){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }else if(id == 4){
+            if(isCanceled){
+            $("#taba"+id).append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+           }
+           }
+          
+			
+		}
+    }
+
+    async  function makeData1(id) {
+        if (!walletWithProvider) {
+         loadingStop();
+         Dreamer.error("No wallet connected",2000);
+         return;
+     }
+         let contract = new ethers.Contract("0xf2D42C8cF34225656d5C012aA4c07569820Be677", factoryAbi, walletWithProvider);
+        if(id == 2){
+            var list = await contract.getMyPoolInfo(privateAddress);
+            $("#taba6").empty();
+        }else if(id == 1){
+            var list = await contract.getMyBettingPoolInfo(privateAddress);
+             $("#taba5").empty();
+        }
+
+		for(var i =list.length-1;i>-1;i--){
+			console.log(list[i])
+            console.log(list[i][2].toString());
+            var num = list[i][2].toString() != "0"?list[i][2].toString():"?";
+            var endTime = list[i][3].toNumber();
+           var time1 =  new Date(parseInt(endTime) * 1000);
+           var isCLosed = list[i][4];
+           var isCanceled = list[i][7];
+           var time2 = new Date().getTime();
+           var time3 = parseInt(endTime) * 1000;
+           var src1 = "images/1USDT.png";
+           if(list[i][1].toNumber()>=1000){
+            var src1 = "images/2USDT.png";
+           }
+            if(list[i][1].toNumber()>=3000){
+            var src1 = "images/3USDT.png";
+           }
+           var svg1 = '<div style="display: initial;padding-left: 4px;" onclick="copyHandel(\''+list[i][0]+'\')"><svg t="1669445493786" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2392" width="13" height="13"><path d="M638.596211 191.936191q30.628116 0 54.62014 13.272183t41.347956 32.66999 26.544367 41.858425 9.188435 39.81655l0 576.829511q0 29.607178-11.740778 53.088734t-30.628116 39.81655-42.368893 25.52343-46.963111 9.188435l-503.322034 0q-19.397807 0-42.368893-11.230309t-42.879362-29.607178-33.180459-42.368893-13.272183-48.494516l0-568.662014q0-21.439681 10.209372-44.410768t26.544367-42.368893 37.774676-32.159521 44.921236-12.761715l515.57328 0zM578.360917 830.021934q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM578.360917 574.787637q26.544367 0 45.431705-18.376869t18.887338-44.921236-18.887338-45.431705-45.431705-18.887338l-382.851446 0q-26.544367 0-45.431705 18.887338t-18.887338 45.431705 18.887338 44.921236 45.431705 18.376869l382.851446 0zM759.0668 0q43.900299 0 80.654038 26.033898t63.808574 64.319043 42.368893 82.695912 15.314058 81.164506l0 542.117647q0 21.439681-12.761715 39.306082t-31.138584 30.628116-39.81655 20.418744-39.81655 7.657029l-4.083749 0 0-609.499501q-8.167498-70.444666-43.900299-108.219342t-94.947159-49.004985l-498.217348 0q1.020937-2.041874 1.020937-7.14656 0-20.418744 12.251246-41.858425t32.159521-38.795613 44.410768-28.586241 49.004985-11.230309l423.688933 0z" p-id="2393" fill="#e6e6e6"></path></svg></div>';
+           if(id == 1){
+            $("#taba5").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+        }else if(id == 2){
+            $("#taba6").append('<div class="single-item"><div class="row"><div class="col-lg-3 col-md-3 d-flex align-items-center"><img class="top-img" src="'+src1+'" alt="image"></div><div class="col-lg-6 col-md-9 d-flex align-items-center"><div class="mid-area" style="width: 100%;"><h4 class="USDTT">'+list[i][8]+':<br/>'+list[i][0]+''+svg1+'</h4><div class="title-bottom d-flex"><div class="time-area bg"><img src="images/waitng-icon.png" alt="image"><span>End Time：</span><span class="time">'+formatDateTime(time1)+'</span></div><div class="date-area bg"><button class="time" type="button" id="title'+i+'" class="btn btn-lg btn-danger" data-trigger="focus" data-toggle="popover"  onclick="setTitle(\''+list[i][0]+'\',\'title'+i+'\')">My Numbers</button></div></div><div class="single-box d-flex"><div class="box-item"><a class="cmn-btn" type="button" data-toggle="modal" data-target="#staticBackdrop1" onclick="setAddress(\''+list[i][0]+'\')">invest</a></div><div class="box-item"><a class="cmn-btn" onclick="returnUsdt(\''+list[i][0]+'\')">redemption</a></div><div class="box-item"><a class="cmn-btn" onclick="claim(\''+list[i][0]+'\')">claims</a></div></div></div></div><div class="col-lg-3 d-flex align-items-center"><div class="prize-area text-center"><div class="contain-area"><span class="prize"><img src="images/price-coin.png" alt="image">Size</span><h4 class="dollar">$'+list[i][1].toString()+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Sell</span><h4 class="dollar">$'+(list[i][1].toNumber()-list[i][6].toNumber())+'</h4><hr><span class="prize"><img src="images/price-coin.png" alt="image">Win Number</span><h4 class="dollar">'+num+'</h4></div></div></div></div></div>'); 
+        }
+           
+     
+			
+		}
+    }
+
+    let formatDateTime = function (date) {  
+   var y = date.getFullYear();  
+   var m = date.getMonth() + 1;  
+   m = m < 10 ? ('0' + m) : m;  
+   var d = date.getDate();  
+   d = d < 10 ? ('0' + d) : d;  
+   var h = date.getHours();  
+   h=h < 10 ? ('0' + h) : h;  
+   var minute = date.getMinutes();  
+   minute = minute < 10 ? ('0' + minute) : minute;  
+   var second=date.getSeconds();  
+   second=second < 10 ? ('0' + second) : second;  
+   return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;  
+};
+    
+  async  function setAddress(adr) {
+        if (!walletWithProvider) {
+         loadingStop();
+         Dreamer.error("No wallet connected",2000);
+         return;
+     }
+  
+        $('#approve').unbind("click");
+            $('#approve').click(()=>{
+           
+           this.approve(adr);
+     
+       });
+        
+       $('#invest').unbind("click");
+        $('#invest').click(
+            ()=>{
+           
+           this.mintHandel(adr);
+     
+       }
+        );
+        var abi=[
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "value",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Approval",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "nominee",
+                    "type": "address"
+                }
+            ],
+            "name": "NewOwnerNominated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnershipTransferred",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "from",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "to",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "value",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Transfer",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "acceptOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                }
+            ],
+            "name": "allowance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "approve",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "balanceOf",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "blackList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "burn",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "list",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "copyMapData",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "decimals",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "subtractedValue",
+                    "type": "uint256"
+                }
+            ],
+            "name": "decreaseAllowance",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "addedValue",
+                    "type": "uint256"
+                }
+            ],
+            "name": "increaseAllowance",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "managerList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "maxTotalSupply",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "mint",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "nominateNewOwner",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "nominatedOwner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "declaration",
+                    "type": "string"
+                }
+            ],
+            "name": "renounceOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "adr",
+                    "type": "address"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "bools",
+                    "type": "bool"
+                }
+            ],
+            "name": "setBlackList",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "adr",
+                    "type": "address"
+                }
+            ],
+            "name": "setManagerAdr",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "symbol",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "totalSupply",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transfer",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "recipient",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transferFrom",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "version",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ];
+    //0x55d398326f99059fF775485246999027B319 7955
+        let contract = new ethers.Contract("0xE7136A1557478e83A340269C2795809EC92596e3", abi, walletWithProvider);
+        var amount = await contract.allowance(privateAddress,adr);
+       var newAmount =  amount.div(ethers.utils.bigNumberify("1000000000000000000")).toNumber().toFixed(0);
+        if(newAmount>100000){
+            $("#approve").hide();
+        }else{
+            $("#approve").show();
+        }
+    }
+
+    async function mintHandel(adr){
+        var amount = $('#investAmount').val();
+        await mint(adr,amount);
+        $('#staticBackdrop1').modal('hide');
+        if(adr == currentSerachAdr){
+            await getSerachPool(adr);
+        }else{
+            await makeData(1);
+        }
+       
+
+    }
+
+   async function setTitle(adr,ids) {
+    $('[data-toggle="popover"]').popover('hide')
+        if (!walletWithProvider) {
+         loadingStop();
+         Dreamer.error("No wallet connected",2000);
+         return;
+     }
+    var abi =[
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "name": "USDT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "claimReward",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "createAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "createRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "devAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "devFomoRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "endTime",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "adr",
+              "type": "address"
+            }
+          ],
+          "name": "getUserNumbers",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "startNum",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "endNum",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ONE.userNumbers[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "_usdtAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_randomAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_createAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "_devAdr",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_timeAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_totalAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_devFomoRadio",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "_createRadio",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ONE.tokenInfo",
+              "name": "info",
+              "type": "tuple"
+            }
+          ],
+          "name": "initialize",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "isCLaimReturn",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isCLaimed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isCLosed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "isInit",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "issueHandle",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "randomAdr",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "returnUsdt",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "sellAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "startTime",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "totalRadio",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "userAdrNumbers",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "startNum",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endNum",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "userIssueAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "winningNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+      let contract = new ethers.Contract(adr, abi, walletWithProvider);
+      list =  await contract.getUserNumbers(privateAddress);
+      var len = list.length; 
+      var text = "";
+      for(var i = 0;i<len;i++){
+        var num1 = list[i][0].toNumber();
+        var num2 = list[i][1].toNumber();
+       
+       
+        if(num2 - num1 == 1){
+            text += num1;
+        }else{
+            text +=num1+"-"+(num2-1); 
+        }
+        if(i!= len-1){
+            text+="\r\n";
+        }
+      }
+      $('#'+ids).attr('data-content',text);
+  
+  $('[data-toggle="popover"]').popover('show')
+
+    }
+
+    function copyHandel(adr){
+        var div = document.createElement("div"); div.innerHTML = adr;
+        document.body.appendChild(div);
+        const range = document.createRange(); 
+	range.selectNode(div); 
+	const selection = window.getSelection();  
+	if (selection.rangeCount > 0) selection.removeAllRanges(); 
+	selection.addRange(range); 
+    document.execCommand('copy');
+    Dreamer.success("copy success",2000);
+   div.style.display = "none";
+    }
+
+</script>
+
+</html>
